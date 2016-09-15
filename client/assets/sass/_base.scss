@@ -1,0 +1,264 @@
+body {
+  font-size: 1.4rem;
+  font-family: 'Gotham-Light';
+}
+h1 {
+  font-size: 5rem;
+  color: $red-regular;
+  font-family: 'Gotham-Light';
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 4rem;
+  font-family: 'Gotham-Bold';
+}
+h3 {
+  font-size: 3.5rem;
+  color: $red-regular;
+  font-family: 'Gotham-Medium';
+}
+h4 {
+  font-size: 3rem;
+  color: $black71;
+  font-family: 'Gotham-Bold';
+}
+h5 {
+  font-size: 2rem;
+  color: $black71;
+  font-family: 'Gotham-Bold';
+}
+h6 {
+  font-size: 1.8rem;
+  color: $black71;
+  font-family: 'Gotham-Light';
+}
+p {
+  color: $black42;
+  font-size: 1.6rem;
+  font-family: Arial;
+}
+p.intro-paragraph {
+  color: $black42;
+  font-size: 2rem;
+}
+p {
+  a {
+    color: $anchor;
+    &:hover {
+      color: $anchor-hover;
+    }
+  }
+}
+a {
+  color: $anchor;
+  font-size: 1.6rem;
+  // font-family: Arial;
+  cursor: pointer;
+  &:hover {
+    color: $anchor-hover;
+    text-decoration: underline;
+  }
+}
+/* -----------------------
+  LIST STYLES BASIC AND NUMBER
+------------------------- */
+ul, ol {
+  color: $black42;
+  // font-family: 'icomoon';
+  li {
+    a {
+      color: $black42;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+    }
+  }
+}
+.first-level {
+  padding-left: 1rem;
+  list-style-type: none;
+  li {
+    a {
+      font-size: 1.6rem;
+    }
+  }
+  .list--number {
+    counter-increment: step-counter;
+    &:before {
+      content: counter(step-counter) ")";
+      margin-right: 5px;
+      font-size: 15px;
+      font-family: Arial;
+    }
+  }
+}
+
+.second-level {
+  .list--alpha {
+    counter-increment: list;
+    &:first-child {
+      counter-reset: list;
+    }
+    &:before {
+      content: counter(list, upper-alpha) ".";
+      margin-right: 5px;
+      font-size: 15px;
+      font-family: Arial;
+    }
+  }
+}
+
+.third-level {
+  padding-left: 1rem;
+  list-style-type: none;
+  .list--number {
+    counter-increment: step-counter;
+    &:first-child {
+      counter-reset: step-counter;
+    }
+    &:before {
+      content: counter(step-counter) ".";
+      margin-right: 5px;
+      font-size: 15px;
+      font-family: Arial;
+    }
+  }
+}
+
+.fourth-level {
+  padding-left: 1rem;
+  list-style-type: none;
+  .list--alpha {
+    counter-increment: list;
+    &:first-child {
+      counter-reset: list;
+    }
+    &:before {
+      content: counter(list, lower-alpha) ".";
+      margin-right: 5px;
+      font-size: 15px;
+      font-family: Arial;
+    }
+  }
+}
+
+.second-level, .third-level, .fourth-level {
+  padding-left: 1rem;
+  li {
+    a {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* -----------------------
+  LIST STYLE TYPE ICON :BEFORE
+  ------------------------- */
+.list {
+  &--icon:before {
+    margin-top: -1px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &--arrow:before {
+    margin-right: 5px;
+    font-size: 6px;
+    content: "\e92e";
+  }
+  &--double-arrow:before {
+    margin-right: 5px;
+    font-size: 6px;
+    content: "\e930";
+  }
+  &--line:before {
+    margin-right: 5px;
+    font-size: 13px;
+    content: '–';
+  }
+  &--disc:before {
+    margin-right: 5px;
+    font-size: 10px;
+    content: '•';
+  }
+}
+/* -----------------------
+  TS ICONS WITH CIRCLE
+  ------------------------- */
+.ts__circle {
+  display: inline-block;
+  &--space-right {
+    margin-right: 2rem;
+  }
+  &--icon {
+    font-size: 12rem;
+    color: $black;
+  }
+  &--black {
+    padding: 2rem;
+    background: $black;
+    span {
+      color: $white;
+    }
+  }
+  &--grey {
+    span {
+      color: $black42;
+    }
+  }
+  &--red {
+    span {
+      color: $red-regular;
+    }
+  }
+}
+
+/* -----------------------
+  STYLES FOR INPUT CHECK BOX
+  ------------------------- */
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  float: left;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; 
+  top: 2px;
+  width: 30px; 
+  height: 30px;
+  background: $white;
+  border-radius: 5px;
+}
+/* checked mark aspect */
+/*[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: "\e013";
+  position: absolute;
+  top: 8px; 
+  left: 2px;
+  font-size: 24px;
+  line-height: 0.8;
+  color: $black42;
+  transition: all .2s;
+  font-family: 'Glyphicons Halflings';
+}
+/* checked mark aspect changes */
+/*[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}*/

@@ -1,0 +1,218 @@
+// .btn {
+//   font-family: "Gotham-Light";
+//   color: $white;
+//   background-color: $red-regular;
+//   border-radius: 5px;
+//   text-transform: uppercase;
+//   &:hover, &:focus {
+//     color: $white;
+//     background-color: $red-dark;
+//   }
+//   &:active {
+//     color: $white;
+//     background-color: $red-medium;
+//   }
+//   &--video {
+//     border-color: $white;
+//     background-color: transparent;
+//     &:hover {
+//       color: $black80;
+//       background-color: $white;
+//     }
+//   }
+//   &--logout {
+//     margin-bottom: 0.5rem;
+//     border-color: $white;
+//     background-color: transparent;
+//     &:hover {
+//       color: $black80;
+//       background-color: $white;
+//     }
+//   }
+//   &--contactus {
+//     background-color: $black42;
+//     &:hover, &:focus {
+//       background-color: $black71;
+//     }
+//     &:active {
+//       background-color: $black80;
+//     }
+//   }
+//   &--small {
+//     padding: 0.3rem 0.9rem 0.2rem;
+//     min-width: 2rem;
+//     font-size: 1.2rem;
+//   }
+//   &--medium {
+//     padding: 1.3rem 2rem 1rem;
+//     font-size: 1.6rem;
+//   }
+//   &--large {
+//     padding: 1.3rem 4rem 1rem;
+//     min-width: 17rem;
+//     max-width: 57rem;
+//     font-size: 2.4rem;
+//   }
+//   &--block {
+//     width: 100%;
+//     max-width: 100%;
+//     display: block;
+//   }
+//   &--search {
+//     > .icon-search {
+//       position: relative;
+//       top: 2px;
+//     }
+//   }
+//   &--transparent {
+//     border-color: $red-regular;
+//     background-color: transparent;
+//     border-width: 2px;
+//     &:hover {
+//       color: $black80;
+//       background-color: $white;
+//     }
+//   }
+//   &--google {
+//     padding: 0.8rem 4rem 0rem;
+//     .icon-google {
+//       font-size: 4.2rem;
+//     }
+//   }
+//   &--github {
+//     padding: 1.3rem 4rem 0.45rem;
+//     color: $black;
+//     .icon-github {
+//       font-size: 3.2rem;
+//     }
+//   }
+// }
+
+
+/* ----------------------
+        OLD STYLES
+    --------------------- */
+
+div.btn > a {
+  color: $white;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background-color: $red-regular;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+div.btn-signIn {
+	padding: 0;
+	> a {
+		margin: 0;
+		padding: 6px 12px 4px;
+	}
+}
+.btn-search {
+  color: $white;
+  background-color: $red-regular;
+  > span {
+    position: relative;
+    top: 2px;
+  }
+}
+.btn.green {
+  // margin-bottom: 0rem;
+  margin: 10px 0;
+	background-color: $green-light;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	color: $white;
+  a {
+    background-color: $green-light;
+  }
+}
+.btn.blue {
+  // margin-bottom: 34px;
+  margin: 30px 0 35px;
+	background-color: $blue-light;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	color: $white;
+  > a {
+    background-color: $blue-light;
+  }
+}
+button {
+  color: $white;
+  margin: 0;
+  padding: 0.7rem 2rem;
+  background-color: $red-regular;
+  border-radius: 4px;
+  border: 2px solid $red-regular;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  &.white {
+    background: transparent;
+    border: 2px solid $red-regular;
+    color: $red-regular;
+  }
+  &.btn-add {
+    background: transparent;
+    border: none;
+    color: $anchor;
+    font-family: "Gotham-Medium";
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+    &.disabled {
+      color: $black60;
+      pointer-events: none;
+    }
+  }
+  &.btn-delete {
+    background: transparent;
+    border: none;
+    color: $red-regular;
+    font-family: "Gotham-Medium";
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+  }
+  &.btn-resend {
+    background: transparent;
+    border: none;
+    color: $anchor;
+    font-family: "Gotham-Medium";
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 4px;
+    > span {
+      font-size: 1.6rem;
+    }
+  }
+  &.pull-right {
+    margin-left: 15px;
+  }
+  &:disabled {
+    background-color: $black20;
+    border-color: $black20;
+    color: $white93;
+    &:hover {
+    	color: $white93;
+    }
+  }
+}
+button+button {
+  margin-left:15px;
+}
+.btn:active, .btn:focus, .btn:hover {
+  box-shadow: none;
+  color: $white;
+}

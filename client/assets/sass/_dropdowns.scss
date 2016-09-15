@@ -1,0 +1,13 @@
+.dropdown-menu {
+	margin: 0;
+	padding: 0;
+	a {
+		padding: 5px 10px;
+		display: block;
+		&:hover {
+			color: #959595;
+			background-color: #f4f4f4;
+			text-decoration: none;
+		}
+	}
+}

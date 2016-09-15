@@ -1,0 +1,42 @@
+.ts-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ts-row:before, .ts-row:after {
+  display: table;
+  content: " ";
+}
+.ts-row:after {
+  clear: both;
+}
+.cols {
+  margin: 20px 0;
+  height: 50px;
+  background-color: #ccc;
+  border: 1px solid #333;
+}
+.ts-cols-6 {
+  margin: 0 30px;
+  width: 1170px;
+}
+.ts-cols-5 {
+  margin: 0 30px;
+  width: 850px;
+}
+.ts-cols-4 {
+  margin: 0 30px;
+  width: 680px;
+}
+.ts-cols-3 {
+  margin: 0 30px;
+  width: 510px;
+}
+.ts-cols-2 {
+  margin: 0 30px;
+  width: 340px;
+}
+.ts-cols-1 {
+  margin: 0 15px;
+  width: 170px;
+  float: left;
+}

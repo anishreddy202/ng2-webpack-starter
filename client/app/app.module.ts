@@ -1,6 +1,7 @@
 import { NgModule }         from '@angular/core';
+import { BrowserModule }    from '@angular/platform-browser';
 import { AppComponent }     from './app.component';
-import { BrowserModule  }   from '@angular/platform-browser';
+import { NavBarComponent }  from './shared/navbar/navbar.component';
 
 
 @NgModule({
@@ -8,7 +9,8 @@ import { BrowserModule  }   from '@angular/platform-browser';
 	  BrowserModule
 	],
 	declarations:[
-	  AppComponent
+	  AppComponent,
+	  NavBarComponent
 	],
 	providers:[],
 	bootstrap:[ AppComponent ]

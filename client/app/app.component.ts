@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 
+require("../assets/main.scss");
+
 @Component({
 	selector:'app',
-	template:'<h1>My Angualar 2 With Webpack1!!!</h1>',
+	template:`
+	  <navbar></navbar>
+	`,
 })
 
 export class AppComponent{

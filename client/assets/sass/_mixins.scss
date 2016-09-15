@@ -1,0 +1,5 @@
+@mixin bg-fakeparallax($bg-path, $bg-size) {
+  background: transparent url($bg-path) top center no-repeat;
+  background-attachment: fixed;
+  background-size: $bg-size;
+}

@@ -1,0 +1,156 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 62.5%; /* Default setting for the rem unit */
+  font-family: 'Gotham-Light';
+}
+.container {
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+a, a:visited, a:focus, a:active, a:hover, button, button:focus, input:focus {
+  outline:0 none !important;
+}
+*:focus {
+  outline: 0;
+  outline: none;
+}
+hr {
+  border-color: $white87;
+}
+.mt5 {
+  margin-top: 5px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.ml5 {
+  margin-left: 5px !important;
+}
+.btn-group {
+	cursor: pointer;
+}
+.centered-block {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	text-align: center;
+}
+//--------------------Gerry's styles ----------------------------//
+.container-liquid {
+  min-height: 100%;
+  margin: 5rem auto -160px;
+  // background-color: $white92;
+  background-color: $white95;
+}
+.push {
+  height: 160px;
+}
+.slideDown {
+  margin-top: 220px;
+  transition: all 1s ease;
+  position: relative !important;
+}
+.slideUp {
+  margin-top: 0px;
+  transition: all .1s ease;
+}
+.checkbox {
+  margin: 0;
+}
+.height-extend {
+  height: 100%;
+  background-color: $white95;
+}
+.divider--red {
+  border-top: 3rem solid $red-regular;
+}
+.has-feedback label ~ .form-control-feedback {
+  top: 7.2rem;
+}
+.form__group > .form-control-feedback {
+  font-size: 2rem;
+  // top: 7.2rem;
+  top: 2.1rem;
+  width: 2rem;
+  height: 2rem;
+  right: 2rem;
+  color: $black42;
+  cursor: pointer;
+  pointer-events: initial;
+  &:hover {
+    color: $black80;
+  }
+  &.icon-alert-circle {
+    color: $red-regular;
+    &:hover {
+      color: $red-dark;
+    }
+  }
+}
+
+.form {
+  &__group {
+    margin-bottom: 12px;
+    text-align: left;
+    position: relative;
+    &--label {
+      margin-bottom: 8px;
+      font-size: 3rem;
+      color: $black71;
+      font-family: 'Gotham-Bold';
+      text-transform: capitalize;
+      font-weight: normal;
+    }
+    &--control {
+      padding-right: 42.5px;
+      height: 6rem;
+      border: 0;
+      color: $black20;
+      font-family: Arial;
+      font-size: 2.4rem;
+    }
+    &--message--holder {
+      margin-top: 5px;
+      height: 20px;
+      display: block;
+    }
+    &--message {
+      color: $black42;
+      font-size: 1.4rem;
+      font-family: Arial;
+      display: none;
+    }
+    .icon-search {
+      color: $red-regular;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      &:hover {
+        color: $red-dark;
+      }
+    }
+  }
+}
+
+.form-control::-webkit-input-placeholder {
+   color: $black40;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+   color: $black40;
+}
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: $black40;
+}
+.form-control:-ms-input-placeholder {
+   color: $black40;
+}

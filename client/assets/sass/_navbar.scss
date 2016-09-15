@@ -1,0 +1,390 @@
+.navbar {
+	background-color: $black;
+  .navbar-header {
+    float: none !important;
+    .account-info {
+      float: right;
+      display: inline-block;
+      color: $white;
+      font-size: 1.4rem;
+      position: relative;
+      top: 15px;
+      margin-right: 10px;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+      a {
+      	margin-top: -1px;
+				display: block;
+      }
+      a, a:visited, a:hover {
+        color: $white;
+        text-decoration: none;
+      }
+      &.logged-in {
+        opacity: 1;
+        a {
+          cursor: default;
+        }
+      }
+    }
+  }
+  .navbar-toggle {
+    border: none;
+    margin-right: 0;
+    padding-right: 0;
+    opacity: 0.5;
+    &.collapsed {
+      opacity: 0.5;
+      .icon-bar {
+        background-color: #fff !important;
+      }
+    }
+    &:hover {
+      background-color: transparent !important;
+      opacity: 1;
+    }
+    &:focus {
+      background-color: transparent !important;
+      .icon-bar {
+        background-color: #999;
+      }
+    }
+  }
+  .navbar-brand {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 21px;
+    span {
+      position: relative;
+      right: 5px;
+			font-size: 18px;
+			top: 0px;
+			font-family: 'Gotham-Light';
+    }
+    .logo-title {
+    	font-size: 21px;
+    }
+  }
+  .icon-bar {
+    background-color: $white;
+  }
+  .navbar-collapse {
+    .topmenu {
+      display:none;
+    }
+  }
+  .navbar-collapse.in, .navbar-collapse.collapsing {
+    .topmenu {
+      display:block;
+    }
+  }
+}
+.topmenu {
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  > li {
+    float: left;
+    width: 16%;
+    h4 {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      white-space: nowrap;
+      font-family: 'Gotham-Light';
+    }
+    a.nav-btn {
+      text-align: center;
+      display: inline-block;
+      color: $black40;
+      border: 1px solid $black40;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      padding: 3px 2px;
+      min-width: 6.5rem;
+      margin-bottom: 1rem;
+      &:hover {
+        color: $black20;
+        border: 1px solid $black20;
+      }
+    }
+  }
+  &__sub {
+    margin: 0;
+    padding: 0;
+    li {
+      clear: both;
+      display: block;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-family: 'Gotham-Light';
+        &:link, &:visited {
+          color: $black40;
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  ul.sn {
+    margin: 0;
+    padding: 0;
+    margin-top: 0rem;
+    clear: both;
+    li {
+      float: left;
+      margin-right: 0.7rem;
+      color: $black60;
+      font-size: 2rem;
+      > a {
+      	// font-size: 2rem;
+      	font-size: 1.6rem;
+				font-family: 'Gotham-Light';
+        &:link, &:visited {
+          color: $black60;
+          text-decoration: none;
+        }
+        &:hover {
+      		color: $white;
+      		text-decoration: none;
+      	}
+      	span {
+      		font-size: 2rem;
+      	}
+      }
+    }
+  }
+  hr {
+    border-color: $black60;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .poweredby {
+    color: $black60;
+    font-size: 1rem;
+    font-family: "Arial";
+  }
+  .logo {
+    display: inline-block;
+    // margin-top: -0.3rem;
+    margin-left: 5px;
+    background: transparent url(images/logo-vz.png) top center no-repeat;
+    // background-size: cover;
+    // background: url("../../assets/images/velocity_logo-med.png") no-repeat;
+		background-size: contain;
+    width: 80px;
+		height: 20px;
+		margin-top: 0;
+		// vertical-align: top;
+  }
+}
+
+// .navbar--ts {
+//   min-height: 8rem;
+//   background-color: $black;
+//   a:hover {
+//     text-decoration: none;
+//   }
+  
+//   .navbar-collapse {
+//     .topmenu {
+//       display:none;
+//     }
+//     &.in, 
+//     &.collapsing {
+//     .topmenu {
+//         display:block;
+//       }
+//     }
+//   }
+//   .navbar--ts__container {
+//     margin-top: 3rem;
+//     margin-bottom: 3rem;
+//     .navbar--ts__header--brand {
+//       padding: 0;
+//       margin-left: 0;
+//       height: 2rem;
+//       font-size: 2.4rem;
+//       font-family: 'Gotham-Book';
+//       &:hover {
+//         color: $black20;
+//       }
+//       &:active {
+//         color: $black42;
+//       }
+//     }
+//   }
+//   .navbar-brand {
+//     color: $white;
+//     text-transform: uppercase;
+//     .icon-thingspace {
+//       top: 0;
+//       font-size: 2rem;
+//       position: relative;
+//     }
+//     .logo-title {
+//       font-size: 2.6rem;
+//       top: 0.1rem;
+//       left: -0.4rem;
+//       display: inline-block;
+//       position: relative;
+//     }
+//   }
+//   .navbar-toggle {
+//     margin: 0;
+//     padding: 0;
+//     border: none;
+//     border-radius: 0;
+//     &.collapsed {
+//       .icon-bar {
+//         background-color: $white;
+//       }
+//       &:hover {
+//         .icon-bar {
+//           background-color: $black20;
+//         }
+//       }
+//     }
+//     .icon-bar {
+//       background-color: $black71;
+//     }
+//     .icon-bar + .icon-bar {
+//       margin-top: 0.6rem;
+//     }
+//   }
+//   .navbar-header {
+//     float: none !important;
+//     .account-info {
+//       margin-right: 2rem;
+//       top: 0;
+//       height: 2rem;
+//       font-size: 1.8rem;
+//       opacity: 1;
+//       float: right;
+//       display: inline-block;
+//       color: $white;
+//       position: relative;
+//       a {
+//         color: $white;
+//         font-family: 'Gotham-Light';
+//         &:hover {
+//           color: $black20;
+//         }
+//         &:active {
+//           color: $black42;
+//         }
+//       }
+//       &.logged-in {
+//         opacity: 1;
+//         a {
+//           cursor: default;
+//           &:hover {
+//             color: $white;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// .topmenu {
+//   margin-top: 3rem;
+//   margin-bottom: 0;
+//   padding: 0;
+//   > li {
+//     float: left;
+//     width: 16%;
+//     h4 {
+//       margin-bottom: 1.3rem;
+//       font-size: 2.6rem;
+//       color: $white;
+//       text-transform: uppercase;
+//       white-space: nowrap;
+//       font-family: 'Gotham-Light';
+//       &:hover {
+//         color: $black20;
+//       }
+//       &:active {
+//         color: $black42;
+//       }
+//     }
+//   }
+//   &__sub {
+//     margin: 0;
+//     padding: 0;
+//     li {
+//       margin-top: 1rem;
+//       margin-bottom: 1.2rem;
+//       line-height: 1;
+//       clear: both;
+//       display: block;
+//       a {
+//         font-size: 1.8rem;
+//         color: $white;
+//         text-decoration: none;
+//         font-family: 'Gotham-Light';
+//         &:hover {
+//           color: $black20;
+//         }
+//         &:active {
+//           color: $black42;
+//         }
+//       }
+//     }
+//   }
+//   ul {
+//     &.sn {
+//       margin: 0;
+//       padding: 0;
+//       clear: both;
+//       li {
+//         margin-right: 1rem;
+//         font-size: 2rem;
+//         float: left;
+//         > a {
+//           color: $white;
+//           font-size: 3.1rem;
+//           text-decoration: none;
+//           &:hover {
+//             color: $black20;
+//           }
+//           &:active {
+//             color: $black42;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .poweredby {
+//     margin-top: 2rem;
+//     font-size: 1.2rem;
+//     font-family: "Arial";
+//     span {
+//       margin-right: .5rem;
+//       color: $black42;
+//     }
+//     .logo {
+//       margin-top: -0.3rem;
+//       margin-right: 0;
+//       width: 8rem;
+//       height: 2rem;
+//       display: inline-block;
+//       background: transparent url(../../assets/images/logo-vz.png) top center no-repeat;
+//       background-size: cover;
+//     }
+//   }
+//   hr {
+//     margin-top: 1rem;
+//     margin-bottom: 1.5rem;
+//     margin-left: 0;
+//     width: 27rem;
+//     border-color: $black71;
+//   }
+// }

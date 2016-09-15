@@ -1,0 +1,59 @@
+/* -----------------------------------
+          TS-WEB 2.0 COLORS 
+  ----------------------------------- */
+
+/*------ PRIMARY ----------------*/
+
+$black:                 #000000;
+$white:                 #ffffff;
+$black80:               lighten($black, 20%);     /* #333333 */
+$black71:               lighten($black, 29.5%);   /* #4b4b4b */
+$black42:               lighten($black, 58.5%);   /* #959595 */
+$black20:               lighten($black, 80%);     /* #cccccc */
+$white92:               darken($white, 8.2%);     /* #eaeaea */
+$white95:               darken($white, 4.5%);     /* #f4f4f4 */
+$red-regular:           #cd040b;
+$red-medium:            #a80309;
+$red-dark:              #990308;
+
+/*------ SECONDARY ----------------*/
+
+$anchor:                #0066cc;
+$anchor-hover:          #00478E;
+$blue-light:            #abe0f9;
+$green-light:           #82ceac;
+$yellow-dark:           #f8d362;
+
+
+/*------ OTHER COLORS FROM OLD SITE ----------------*/
+
+$black60:                 lighten($black, 40%);   /* #656565 */
+$black40:                 lighten($black, 60%);   /* #999999 */
+$white93:                 $white92;     
+$white87:                 darken($white, 13%);    /* #dddddd */
+$ts-red:                  $red-regular;
+$ts-contactus:            $white92;
+$color-blue:              $blue-light;
+$color-green:             $green-light;
+$color-yellow:            $yellow-dark;
+$color-red:               $red-regular;
+$dropdown-menu:           $white95;
+
+
+/* For Beehive layout icons */
+// $bh-height: 90;
+// $bh-x: 0;
+// $bh-y: 200;
+// $bh-offset-x: 175;
+// $bh-offset-y: 175;
+
+/* For Distribute layout icons */
+// $dt-height: 90;
+// $dt-x: 0;
+// $dt-y: 200;
+// $dt-offset-x: 150;
+// $dt-offset-y: 150;
+
+/* For Square Grid */
+// $colsperrow: 6;
+// $sq-gr-width: percentage(1/$colsperrow); 

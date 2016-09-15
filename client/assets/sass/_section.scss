@@ -1,0 +1,387 @@
+/* -----------------------
+  SECTION STYLES
+  ------------------------- */
+.section {
+  &__header {
+    &__title {
+      height: 180px;
+      display: block;
+      color: $white;
+      position: relative;
+      &--text {
+        margin-top: 3.6rem;
+        letter-spacing: -2px;
+        text-align: left;
+        color: $white;
+      }
+      &--oversized {
+        margin-top: 1rem;
+      }
+    }
+    &--icon {
+      margin-right: 3rem;
+      margin-top: 3rem;
+      width: 12rem;
+      height: 12rem;
+      float: left;
+      position: relative;
+      border-radius: 100%;
+      [class^="icon-"], [class*=" icon-"] {
+        font-size: 12rem;
+      }
+    }
+  }
+  &__nav {
+    height: 8rem;
+    background: rgba(0, 0, 0, 0.5);
+    &--container {
+      border-bottom: 2px solid $white;
+    }
+    &--header {
+      float: left;
+      color: $white;
+      text-transform: uppercase;
+      &.active {
+        border-bottom: 4px solid $white;
+        .section__nav--header--text {
+          margin-bottom: -6px;
+        }
+      }
+      &:hover {
+        color: $black20;
+        text-decoration: none;
+      }
+      &:active {
+        color: $black42;
+      }
+    }
+    &--header--text {
+      margin-top: 8px;
+      margin-bottom: -2px;
+      line-height: 1.42857143;
+      font-family: 'Gotham-Light';
+    }
+    &--list {
+      padding: 0px;
+      top: 2.5rem;
+      float: right;
+      position: relative;
+      &--item {
+        margin-left: 4rem;
+        float: left;
+        &:first-child {
+          margin-left: 0;
+        }
+        &.active {
+          border-bottom: 4px solid $white;
+        }
+      }
+      &--link {
+        color: $white;
+        font-size: 2.4rem;
+        font-family: 'Gotham-Light';
+        text-transform: capitalize;
+        &:hover {
+          color: $black20;
+          text-decoration: none;
+        }
+        &:focus {
+          color: $white;
+          text-decoration: none;
+        }
+        &:active {
+          color: $black42;
+        }
+      }
+    }
+  }
+  &__body--mid {
+    padding: 4rem 0 4rem;
+    background-color: $white95;
+  }
+  &__body {
+    &--contactus {
+      background-color: $white92;
+      .section__body--paragraph {
+        min-height: 3rem;
+      }
+    }
+    &__container {
+      text-align: center;
+    }
+    &__fullwidth {
+      margin-top: -4rem;
+      width: 100%;
+    }
+    &__row {
+      margin-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    &--header {
+      color: $black80;
+      text-transform: uppercase;
+    }
+    &--paragraph {
+      min-height: 7rem;
+      line-height: 2.5rem;
+    }
+    &--icon {
+      span {
+        font-size: 10rem;
+        color: $black42;
+      }
+    }
+    &--button {
+      margin-bottom: 2rem;
+      padding-top: 2rem;
+    }
+    &--image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__trends, &__smartcities {
+    &--header {
+      text-align: left;
+      text-transform: initial;
+    }
+    &--paragraph, &__smartcities {
+      text-align: left;
+      color: $black42;
+    }
+  }
+  &__tagcloud {
+    &--header {
+      float: left;
+      text-transform: initial;
+    }
+    &--input {
+      width: 30%;
+      float: right;
+    }
+    &--container {
+      margin-bottom: 1rem;
+    }
+    &--tags {
+      a {
+        font-family: 'Gotham-Light';
+        &:hover {
+          color: $black !important;
+          text-decoration: none;
+        }
+        &:active, &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__partners {
+    &__info {
+      padding-bottom: 0;
+      &--header {
+        text-align: left;
+        font-size: 1.6rem;
+        color: $red-regular;
+      }
+      &--paragraph {
+        font-size: 1.4rem;
+        text-align: left;
+      }
+    }
+    &--paragraph {
+      min-height: 11rem;
+    }
+  }
+  &__grid {
+    margin-top: 0;
+    &__sqblock {
+      width: 16.66667%;
+      float: left;
+      display: inline-block;
+      position: relative;
+      &__content {
+        margin-bottom: 2rem;
+        width: 90%;
+        font-size: 12rem;
+        background: $white;
+        border: 1px solid $white95;
+        box-shadow: 1px 1px 3px $black20;
+      }
+      &--icon {
+        margin: 25px 10px;
+        display: block;
+        color: $black42;
+      }
+    }
+  }
+  &__smartcities {
+    &--paragraph {
+      margin-bottom: 2rem;
+    }
+  }
+  &__login {
+    padding-top: 0;
+    &--container {
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 77rem;
+    }
+    &--form {
+      margin-top: 1rem;
+    }
+    &--header {
+      color: $black71;
+    }
+    &--info {
+      &--text {
+        font-family: Arial;
+        font-size: 2.4rem;
+      }
+      &--link {
+        font-weight: bold;
+        color: $red-regular;
+        font-size: 2.4rem;
+        &:hover {
+          color: $red-dark;
+        }
+        &:active, &:focus {
+          color: $red-medium;
+        }
+      }
+    }
+    &--subheader {
+      margin-top: 3rem;
+      margin-bottom: 0;
+    }
+    .button-wrapper {
+      padding-top: 1.5rem;
+    }
+    // &--form-group {
+    //   margin-bottom: 12px;
+    //   text-align: left;
+    // }
+    // &--label {
+    //   margin-bottom: 8px;
+    //   font-size: 3rem;
+    //   color: $black71;
+    //   font-family: 'Gotham-Bold';
+    //   text-transform: capitalize;
+    //   font-weight: normal;
+    // }
+    // &--form-control {
+    //   height: 6rem;
+    //   border: 0;
+    //   color: $black20;
+    //   font-family: Arial;
+    //   font-size: 2.4rem;
+    // }
+    &--terms {
+      margin: 0 1rem 0 0;
+      width: 30px;
+      height: 30px;
+      float: left;
+      &--text {
+       margin-top: 5px;
+       text-align: left;
+      }
+    }
+    &--text {
+      margin-top: 0;
+      color: $black20;
+      font-family: 'Gotham-Medium';
+    }
+    &--line {
+      color: $black20;
+      border-width: 2px;
+    }
+    &--cols {
+      margin-top: 1rem;
+      &--left {
+        padding-right: 0px;
+        width: 45%;
+      }
+      &--middle {
+        width: 10%;
+      }
+      &--right {
+        padding-left: 0px;
+        width: 45%;
+      }
+    }
+    &--footer {
+      // margin-top: 2rem;
+      .button-wrapper {
+        padding-top: 0rem;
+        float: right;
+      }
+    }
+    // &--message {
+    //   margin-top: 5px;
+    //   color: $black42;
+    //   font-size: 1.4rem;
+    //   font-family: Arial;
+    //   display: none;
+    // }
+  }
+}
+
+// .login {
+//   &--form-group {
+//     margin-bottom: 12px;
+//     text-align: left;
+//   }
+//   &--label {
+//     margin-bottom: 8px;
+//     font-size: 3rem;
+//     color: $black71;
+//     font-family: 'Gotham-Bold';
+//     text-transform: capitalize;
+//     font-weight: normal;
+//   }
+//   &--form-control {
+//     height: 6rem;
+//     border: 0;
+//     color: $black20;
+//     font-family: Arial;
+//     font-size: 2.4rem;
+//   }
+//   &--message {
+//     margin-top: 5px;
+//     color: $black42;
+//     font-size: 1.4rem;
+//     font-family: Arial;
+//     display: none;
+//   }
+// }
+
+
+
+/* -----------------------
+  SECTION HEADER BACKGROUNDS
+  ------------------------- */
+.section__bkgrnd {
+  &__develop {
+    background: transparent url("images/bg-develop.jpg") top center no-repeat;
+  }
+  &__trends {
+    background: transparent url("images/bg-trends.jpg") top center no-repeat;
+  }
+  &__partners {
+    background: transparent url("images/banner_partners.jpg") top center no-repeat;
+  }
+  &__solutions {
+    background: transparent url("images/bg-solutions.jpg") top center no-repeat;
+  }
+  &__smartcities {
+    background: transparent url("images/bg-smartcities.jpg") top center no-repeat;
+  }
+  &__manage {
+    background: transparent url("images/bg-manage.jpg") top center no-repeat;
+  }
+  &__develop, &__trends, &__partners, &__solutions, &__smartcities, &__manage {
+    background-attachment: fixed;
+    //background-size: cover;
+    background-size: 130% auto;
+  }
+}

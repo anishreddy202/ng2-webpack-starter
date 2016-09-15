@@ -1,0 +1,61 @@
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "sass/mixins";
+@import "sass/variables";
+@import "sass/columns";
+@import "sass/fonts";
+@import "sass/icons";
+@import "sass/global";
+@import "sass/forms";
+@import "sass/pages";
+@import "sass/base";
+@import "sass/buttons";
+@import "sass/navbar";       /* COMPLETE */
+@import "sass/footer";       /* COMPLETE */
+@import "sass/section";
+@import "sass/video-main";   /* COMPLETE */
+@import "sass/responsive";
+
+/* DELETE STYLEGUID STYLES WHEN READY FOR DEPLOY -----------------------------*/
+.styleguide {
+  text-align: left;
+  .row {
+    margin: 0;
+  }
+  &--header {
+    color: #00bce8;
+  }
+  &--subheader {
+    padding: 1rem;
+    color: $white;
+    font-family: 'Gotham-Book';
+    background-color: #00bce8;
+  }
+}
+/*-------------------------------------------*/
+.ts__brand {
+  padding: 1.5rem 2rem 1.3rem;
+  display: inline-block;
+  &--black {
+    background: $black;
+    .ts__brand--title {
+      color: $white;
+    }
+  }
+  &--icon {
+    margin-right: 7px;
+    font-size: calc(85% + -15%);
+    margin-top: -2.5%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &--title {
+    margin-top: 5px;
+    font-size: 9.8rem;
+    line-height: 0.8;
+    display: inline-block;
+    font-family: "Gotham-Book";
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+  }
+}
