@@ -15,7 +15,7 @@ module.exports = {
 	module:{
 		loaders:[
 			{ test: /\.ts$/, loader: 'ts'},
-			{ test: /\.html$/, loader: 'html-loader'},
+			{ test: /\.html$/, loader: 'html-loader', },
 			{ test: /\.scss$/,  exclude: /node_modules/,
 				 loader: ExtractTextPlugin.extract("style", "css!sass")
 			},
@@ -25,6 +25,13 @@ module.exports = {
 				loader: 'file-loader?limit=10000&mimetype=application/font-woff'
 			}
 		]
+	},
+	htmlLoader:{
+	  minimize: true,
+	  removeAttributeQuotes: false,
+	  caseSensitive: true,
+	  customAttrSurround: [ [/#/, /(?:)/], [/\*/, /(?:)/], [/\[?\(?/, /(?:)/] ],
+	  customAttrAssign: [ /\)?\]?=/ ] 
 	},
 	resolve:{
 		extensions:['','.js','.ts']
