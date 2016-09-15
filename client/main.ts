@@ -11,6 +11,7 @@ if (app.environment === 'production') {
 
 platformBrowserDynamic().bootstrapModule(AppModule).then(function(){
 	console.log('BootStrap Success');
+	console.log('Page load Time: ' + ((new Date).getTime() - window.performance.timing.connectEnd) + 'ms');
 }).catch(function(error){
 	console.log(error);
 })
