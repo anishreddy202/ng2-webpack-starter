@@ -6,6 +6,7 @@ require("../assets/main.scss");
 	selector:'app',
 	template:`
 	  <navbar></navbar>
+	  <router-outlet></router-outlet>
 	`,
 })
 

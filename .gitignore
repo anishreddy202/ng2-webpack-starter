@@ -1,3 +1,8 @@
 dist/
 node_modules/
 typings/
+
+# client
+client/*.js
+client/app/**/*.js
+client/**/*.js.map

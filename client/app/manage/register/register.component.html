@@ -1,0 +1,76 @@
+<div class="container-liquid">
+  <section class="hero hero--single hero--manage fakeparallax fakeparallax--manage">
+    <div class="container hero__content">
+        <div class="icon-container"><span class="icon-manage"></span></div>
+        <h1>MANAGE WITH OUR SELF-SERVICE PORTAL.</h1>
+    </div>
+  </section>
+	<section class="plain plain--bordertop plain--manage plain--signinup">
+	    <div class="container plain__content plain--form">
+	        <div class="row">
+	            <div class="col-sm-12 col-md-9 col-md-offset-3">
+	                <h2>Create an Account</h2>
+	                <div *ngIf="status.code === 'error'" id="err-msg" class="alert alert-danger" role="alert">
+                        {{status.message}}
+                    </div>
+	                <div *ngIf="status.code === 'success'" id="err-msg" class="alert alert-success" role="alert">
+                        {{status.message}}
+                    </div>
+	                <form role="form" #registerForm="ngForm" (ngSubmit)="register()">
+	                    <div class="col-sm-12 col-md-8">
+	                        <div class="form-group">
+	                            <label for="email-input">Email</label>
+	                            <input id="email-input" type="email" [(ngModel)]="user.email"
+	                            	   class="form-control" name="email" placeholder="Email" #email="ngModel"  required>
+	                        </div>
+	                    </div>
+ 	                    <div class="col-sm-12 col-md-4">
+	                        <div [hidden]="email.valid || email.pristine"  class="input-errormsg withlabel">Required Email</div>
+	                    </div>
+	                   <div class="col-sm-12 col-md-8">
+	                        <div class="form-group">
+	                            <label for="pwd-input">Password</label>
+	                            <input id="pwd-input" type="password" name="password" class="form-control" [(ngModel)]="user.password" placeholder="Password" #password="ngModel" required>
+	                        </div>
+	                    </div>
+	                    <div class="col-sm-12 col-md-4">
+	                        <div class="input-helpertext withlabel">Password must be at least 8 characters including 1 number or
+	                            special character, 1 uppercase letter and 1 lowercase letter.
+	                        </div>
+	                        <div [hidden]="password.valid || password.pristine" class="input-errormsg withlabel">Required Password</div>
+	                    </div>
+	                    <div class="col-sm-12 col-md-8">
+	                        <div class="form-group">
+	                            <label for="inputFirstname">First Name</label>
+	                            <input id="inputFirstname" type="text" [(ngModel)]="user.firstName" class="form-control" name="firstName" placeholder="First Name">
+	                        </div>
+	                    </div>
+	                    <div class="col-sm-12 col-md-8">
+	                        <div class="form-group">
+	                            <label for="inputLastname">Last Name</label>
+	                            <input id="inputLastname" type="text" [(ngModel)]="user.lastName" class="form-control" name="lastName" placeholder="Last Name">
+	                        </div>
+	                    </div>
+	                    <div class="col-sm-12 col-md-8">
+	                        <div class="form-group">
+	                            <label for="inputCompany">Company(Optional)</label>
+	                            <input id="inputCompany" type="text" class="form-control" [(ngModel)]="user.organizationName" name="organizationName" placeholder="Company(Optional)">
+	                        </div>
+	                    </div>
+	                    <div class="col-sm-12 col-md-8">
+	                        <div class="checkbox pull-left">
+	                        	<input id="signup-chkbox" type="checkbox"  name="tnc">
+	                            <label for="signup-chkbox">I agree to the <a href="#">Terms and Conditions</a></label>
+	                        </div>
+	                        <button id="send-btn" class="btn pull-right" [disabled]="!registerForm.form.valid" type="submit">Sign Up</button>
+	                        <div class="clearfix"></div>
+	                        <div class="signinup">Already have an account? <a routerLink="/login">Sign In Now</a></div>
+	                    </div>
+	                    <div class="col-sm-12 col-md-4"></div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<div class="push"></div>
+</div>

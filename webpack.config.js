@@ -19,7 +19,9 @@ module.exports = {
 			{ test: /\.scss$/,  exclude: /node_modules/,
 				 loader: ExtractTextPlugin.extract("style", "css!sass")
 			},
-			{ test: /\.(png|jpg|jpeg|gif)$/, loader: 'url-loader?limit=10000'},
+			{ 	test: /\.(png|jpg|jpeg|gif)$/, 
+				loader: 'url-loader?limit=10000'
+			},
 			{ 
 				test: /\.(woff|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
 				loader: 'file-loader?limit=10000&mimetype=application/font-woff'

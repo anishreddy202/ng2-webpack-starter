@@ -1,0 +1,63 @@
+<div class="container-liquid">
+	<div id="page-content">
+	<section class="hero hero--single hero--manage fakeparallax--manage">
+	    <div class="container hero__content">
+	        <div class="icon-container"><span class="icon-manage"></span></div>
+	        <h1>MANAGE WITH OUR SELF-SERVICE PORTAL.</h1>
+	    </div>
+		</section>
+		<section class="plain plain--bordertop plain--manage plain--signinup">
+		    <div class="container plain__content plain--form">
+		        <div class="row">
+		            <div class="col-sm-12 col-md-9 col-md-offset-3">
+		                <h2>Sign In</h2>
+		                <div *ngIf="status.code === 'error'" class="alert alert-danger" role="alert">
+	                        {{status.message}}
+	                    </div>
+		                <form role="form" #loginForm="ngForm" (ngSubmit)="login()">
+		                    <div class="col-sm-12 col-md-8">
+		                      <div class="form-group">
+		                          <label for="inputUsername">Email</label>
+		                          <input id="inputUsername" type="text"class="form-control" name="username" [(ngModel)]="user.email" #username="ngModel" placeholder="Email" required>
+		                      </div>
+		                    </div>
+		                    <div class="col-sm-12 col-md-4">
+		                      <div [hidden]="username.valid || username.pristine" class="input-errormsg withlabel"> Required Username</div>
+		                    </div>
+		                    <div class="col-sm-12 col-md-8">
+		                      <div class="form-group">
+		                          <label for="inputPassword">Password</label>
+		                          <input id="inputPassword" type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="user.password"  placeholder="Password" required>
+		                      </div>
+		                    </div>
+		                    <div class="col-sm-12 col-md-4">
+		                      <div [hidden]="password.valid || password.pristine" class="input-errormsg withlabel">Required Passowrd</div>
+		                    </div>
+		                    <div class="col-sm-12 col-md-8">
+			                    <div class="clearfix">
+			                      <a type="submit" href="/ui/api/login/github" class="btn action-btn btn--github">Sign in with GitHub</a>
+			                    	<!-- <div class="forgotpwd pull-left">
+			                        <a href="/auth/help">Need Help?</a>
+			                      </div> -->
+			                      <button type="submit" [disabled]="!loginForm.form.valid" class="btn action-btn">Sign In</button>
+			                    </div>
+			                    <div class="forgotpwd">
+		                        <a href="/auth/help">Need Help?</a>
+		                      </div>
+		                      <!-- <div class="signinup signinup--github">
+		                      	<a routerLink="/register">Sign in with GitHub</a>
+		                      </div> -->
+		                      <div class="signinup">Don't have an account? 
+		                      	<a routerLink="/register">Sign Up Now</a>
+		                      </div>
+		                    </div>
+		                    <div class="col-sm-12 col-md-4"></div>
+		                </form>
+		                <div class="col-sm-12 col-md-4"></div>
+		            </div>
+		        </div>
+		    </div>
+		</section>
+		<div class="push"></div>
+	</div>
+</div>
